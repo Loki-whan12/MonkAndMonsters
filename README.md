@@ -71,15 +71,28 @@ The graphical version is developed using TypeScript, Vite, and the Phaser librar
     ```sh
     cd graphical
     ```
-2. Install the dependencies:
+2. Extract the archive:
+    ```sh
+    template-vite-ts-main.zip
+    ```
+3. Navigate to template-vite-ts-main:
+    ```sh
+    cd template-vite-ts-main
+    ```
+4. Replace the follwing directories:
+    ```sh
+    public -> with the public in ../graphical/
+    src -> with the src in ../graphical/
+    ```
+5. Install the dependencies:
     ```sh
     npm install
-    ```
-3. Start the development server:
+    ``
+6. Start the development server:
     ```sh
     npm run dev
     ```
-4. Open your browser and navigate to the provided local server URL to play the game.
+7. Open your browser and navigate to the provided local server URL to play the game.
 
 ## Contribution
 
