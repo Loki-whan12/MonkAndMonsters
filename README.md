@@ -87,7 +87,7 @@ The graphical version is developed using TypeScript, Vite, and the Phaser librar
 5. Install the dependencies:
     ```sh
     npm install
-    ``
+    ```
 6. Start the development server:
     ```sh
     npm run dev
