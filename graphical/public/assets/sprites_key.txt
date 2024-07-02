@@ -1,0 +1,42 @@
+SpellCast[SP-C -- 4 Types]
+SP-C-1 [0 - 27] --[7 per frame]
+
+Thrust [Th --4 Types]
+[28-59] -- [8 per frame]
+
+Thrust [Wlk --4 Types]
+[60 - 95] -- [9 per frame]
+
+Slash [Slh --4 Types]
+[95 - 119] -- [6 per frame]
+
+Shoot [Sht --4 Types]
+[120 - 171] -- [13 per frame]
+
+Hurt frame []
+[172 - 177] -- [only 1 frame/ 6]
+
+Watering frame []
+[178 - 183] -- [only 1 frame /6]
+
+Idle frame []
+[184 - 199] -- [4 per frame]
+[184-185-186-187]
+[188-189-190-191]
+[192-193-194-195]
+[196-197-198-199]
+
+Jump frame []
+[200 - 219] -- [5 per frame]
+
+run frame []
+[220 - 243] -- [6 per frame]
+
+sit frame []
+[244 - 275] -- [8 per frame]
+
+emote frame []
+[276 - 327] -- [13 per frame]
+
+climb frame []
+[328 - 351] -- [6 per frame]

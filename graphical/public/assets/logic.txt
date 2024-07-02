@@ -1,0 +1,172 @@
+Task to be completed
+
+
+General Task
+A.Keep Track of the number of Monks on left river side land
+B.Keep Track of the number of Monster on left river side land
+C.Keep Track of the number of Monks on right river side land
+D.Keep Track of the number of Monster on right river side land
+E.Keep Track of the total number of Monks on left river side
+F.Keep Track of the total number of Monks on right river side
+G.Keep Track of the total number of Monster on left river side
+H.Keep Track of the total number of Monster on right river side
+I.Keep Track of the number of monks on the boat
+J.Keep Track of the number of Monsters on the boat
+K.Keep Track of the total number of Occupants on the boat
+L.Keep Track which side the boat on [left(default, right)]
+M.Implement add feature for left river side to add a monk from land[side][selecting monk]
+N.Implement add feature for left river side to add a monster from land[side][selecting monster]
+O.Implement add feature for right river side to add a monk from land[side][selecting monk]
+P.Implement add feature for right river side to add a monster from land[side][selecting monster]
+Q.Implement remove feature for left river side to remove a monk from boat[side][textButton]
+R.Implement remove feature for left river side to remove a monster from boat[side][textButton]
+S.Implement remove feature for right river side to remove a monk from boat[side][textButton]
+T.Implement remove feature for right river side to remove a monster from boat[side][textButton]
+U.Implement move feature but selecting the boat.
+
+Pre conditions
+when the game starts
+Monks[] =  used to create the holding space for the initial conditions in case the game restarts you still in buffer the Monk[] so you dont have to create new enteries again. 
+Monsters[] =  used to create the holding space for the initial conditions in case the game restarts you still in buffer the Monsters[] so you dont have to create new enteries again.
+LeftRiverSideMonks[] = Monks[]
+LeftRiverSideMonsters = Monsters[]
+RightRiverSideMonks[] = []
+RightRiverSideMonsters = []
+remove button = 'remove monk left side'
+remove button = 'remove monster left side'
+remove button = 'remove monk right side'
+remove button = 'remove monster right side'
+monkOnBoat = 0
+monsterOnBoat = 0
+[General Task A] = the initial number of monks in the Monks[]
+[General Task B] = the initial number of monsters in the Monsters[]
+[General Task C] = the initial number of monks in the Monks[]
+[General Task D] = the initial number of monsters in the Monks[]
+
+Specific Tasks
+
+A.Keep Track of the number of Monks on left river side land
+1. the number of monks on left river side land = LeftRiverSideMonks[].size()
+
+B.Keep Track of the number of Monsters on left river side land
+1. the number of monsters on left river side land = LeftRiverSideMonsters[].size()
+
+C.Keep Track of the number of Monks on right river side land
+1. the number of monks on right river side land = RightRiverSideMonks[].size()
+
+D.Keep Track of the number of Monsters on right river side land
+1. the number of monsters on right river side land = RightRiverSideMonsters[].size()
+
+E.Keep Track of the total number of Monks on left river side
+1. the total number of Monks on left river side = [General Task A] + monkOnBoat;
+
+F.Keep Track of the total number of Monks on right river side
+1. the total number of Monks on right river side = [General Task C] + monkOnBoat
+
+G.Keep Track of the total number of Monsters on right river side
+1. the total number of Monsters on left river side = [General Task D] + monsterOnBoat;
+
+H.Keep Track of the total number of Monsters on left river side
+1. the total number of Monks on left river side = [General Task B] + monsterOnBoat;
+
+I.Keep Track of the number of monks on the boat
+pre condition -- [Depending on which [General Task K or M]] -- only two occupants are allowed in the boat
+1. check to see if BoatOccupants[].size is not more than 2 occupants, if true >>> continue from 2 to 6 else ignore request to add
+2. when a user selects a monk on the river left side land or river right side land, move the monk to the edge to enter the boat
+3. when the monk enters the boat, pop that respective monk from LeftRiverSideMonks[] or RightRiverSideMonks[]
+4. push the poped monk from LeftRiverSideMonks[] or RightRiverSideMonks[]to boat Ocupants.
+5. as the size of LeftRiverSideMonks[].size or RightRiverSideMonks[] has reduced so has [General Task A or C]
+6. increment the monk on boat counter
+
+
+J.Keep Track of the number of Monsters on the boat
+pre condition -- [Depending on which [General Task L or N]] -- only two occupants are allowed in the boat
+1. check to see if BoatOccupants[].size is not more than 2 occupants, if true >>> continue from 2 to 6 else ignore request to add
+2. when a user selects a monster on the river left side land or river right side land, move the monster to the edge to enter the boat
+3. when the monster enters the boat, pop that respective monster from LeftRiverSidemonster[] or RightRiverSidemonster[]
+4. push the poped monk from LeftRiverSidemonster[] or RightRiverSidemonster[]to boat Ocupants.
+5. as the size of LeftRiverSidemonster[].size or RightRiverSidemonster[] has reduced so has [General Task B or D]
+6. increment the monster on boat counter
+
+K.Keep Track of the number of Occupants on the boat
+1. The total number of occupants on boat = BoatOcuppants[].size
+
+L.Keep Track which side the boat on [left(default, right)]
+1. the RIVER_SIDE = false [left river side] or true [right river side]
+
+M.Implement add feature for left river side to add a monk from land[side][selecting monk]
+condition -- when a monk is selected, no other entity in the game can be selected till the monk has entered the boat; --- [ monk.x = boat.x], after which any other can be selected
+1. [General Task G]
+2. [General Task I]
+
+N.Implement add feature for left river side to add a monster from land[side][selecting monster]
+condition -- when a monster is selected, no other entity in the game can be selected till the monster has entered the boat; --- [ monster.x = boat.x], after which any other can be selected
+1. [General Task H]
+2. [General Task I]
+
+O.Implement add feature for right river side to add a monk from land[side][selecting monk]
+condition -- when a monk is selected, no other entity in the game can be selected till the monk has entered the boat; --- [ monk.x = boat.x], after which any other can be selected
+1. [General Task G]
+2. [General Task I]
+
+P.Implement add feature for right river side to add a monster from land[side][selecting monster]
+condition -- when a monk is selected, no other entity in the game can be selected till the monster has entered the boat; --- [ monster.x = boat.x], after which any other can be selected
+1. [General Task H]
+2. [General Task I]
+
+Q.Implement remove feature for left river side to remove a monk from boat[side][textButton]
+condition -- when the remove monk button is selected, no other entity in the game can be selected till the monk has been removed from the boat, after which any other can be selected
+1. when the user click on the remove monk button on the left side
+2. check to see if the boat is on the left side, if not ignore the request
+3. if the boat is empty, ignore the request else
+3. pop the monk from the BoatOccupant[]
+4. push the poped monk from the BoatOccupants and store in LeftRiverSideMonks[]
+5. [General Task A]
+6. decrement the monkOnBoat
+7. [General Task E]
+
+R.Implement remove feature for left river side to remove a monster from boat[side][textButton]
+condition -- when a monster is selected, no other entity in the game can be selected till the monster has been removed from the boat, after which any other can be selected
+1. when the user click on the remove monster button on the left side
+2. check to see if the boat is on the left side, if not ignore the request
+3. if the boat is empty, ignore the request else
+3. pop the monster from the BoatOccupant[]
+4. push the poped monster from the BoatOccupants and store in LeftRiverSideMonsters[]
+5. [General Task B]
+6. decrement the monkOnBoat
+7. [General Task H]
+
+S.Implement remove feature for right river side to remove a monk from boat[side][textButton]
+condition -- when a monk is selected, no other entity in the game can be selected till the monk has been removed from the boat, after which any other can be selected
+1. when the user click on the remove monk button on the right side
+2. check to see if the boat is on the right side, if not ignore the request
+3. if the boat is empty, ignore the request else
+3. pop the monk from the BoatOccupant[]
+4. push the poped monk from the BoatOccupants and store in RightRiverSideMonks[]
+5. [General Task C]
+6. decrement the monkOnBoat
+7. [General Task F]
+
+T.Implement remove feature for right river side to remove a monster from boat[side][textButton]
+condition -- when a monster is selected, no other entity in the game can be selected till the monster has been removed from the boat, after which any other can be selected
+1. when the user click on the remove monster button on the right side
+2. check to see if the boat is on the right side, if not ignore the request
+3. if the boat is empty, ignore the request else
+3. pop the monster from the BoatOccupant[]
+4. push the poped monster from the BoatOccupants and store in RightRiverSideMonsters[]
+5. [General Task D]
+6. decrement the monkOnBoat
+7. [General Task G]
+
+
+U.Implement move feature by selecting the boat
+if the total number occupants on boat is zero ignore the request and 
+1. check to see if OccupantsOnBoat[].size <= 2 or there is at least one occupant in the boat, if true execute code below else ignore request call
+2. hide the text buttons to remove monks and monster on both left and right
+3. disable selection of all other entities
+4. check to see which side the boat is on
+5. if boat is on left side: setVelocity to move boat from left to right else if boat is on right side: setVelocity to move boat from left to right
+6. when the boat reaches the opposite side of where it was [ left -> right or right -> left] then
+6. display controls to remove monk or monster
+7. enable selection of all entities again
+8. flip the boolean var holding the current river side value;
